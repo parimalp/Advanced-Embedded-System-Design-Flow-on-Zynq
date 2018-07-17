@@ -252,7 +252,7 @@ SDK should open and automatically create a hardware platform project based on th
     <p align = "center">
     <i>SDK Terminal Output</i>
     </p>
-1. Press the BTN0-BTN3 (PYNQ-Z1, PYNQ-Z2) and see the corresponding LED light up.
+1. Press BTN0-BTN3 (PYNQ-Z1, PYNQ-Z2) and see the corresponding LED light up.
 1. Set the two slide switches on PYNQ-Z1 or PYNQ-Z2 to the ON position to exit the program.
 1. Close SDK and Vivado programs by selecting **File &gt; Exit** in each program.
 1. Turn OFF the power to the board.

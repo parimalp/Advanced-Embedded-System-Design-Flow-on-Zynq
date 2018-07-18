@@ -9,7 +9,7 @@ After completing this lab, you will be able to:
 * Add an ILA core in Vivado
 * Perform hardware debugging using the hardware analyzer
 * Perform software debugging using the SDK
-*
+
 ## Steps
 
 ## Open the Project
@@ -42,7 +42,7 @@ After completing this lab, you will be able to:
     <img src ="./images/lab2/Fig3.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Custom Core&#39;s Main Functional Block</i>
+    <i>Custom Core's Main Functional Block</i>
     </p>
 ## Add the ILA and VIO Cores        
 
@@ -61,7 +61,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     <p align = "center">
     <i>Select the gpio_io_o port</i>
     </p>
-    The port connector named gpio\_io\_o will be created and connected to the port.
+    The port connector named gpio_io_o will be created and connected to the port.
 
 1. Select the port _gpio\_io\_o_ and change its name to **leds** by typing it in the properties form.
 1. Enable cross triggering between the PL and PS
@@ -197,7 +197,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Connect and power up the board.
 1. Select **Xilinx** &gt; **Program FPGA** and click **Program**
 1. Select the **lab2** project in _Project Explorer_, right-click and select **Debug As &gt; Launch on Hardware** (System Debugger) to download the application, execute ps7\_init. (If prompted, click **Yes** to switch to the Debug perspective.)  The program execution starts and suspends at the entry point.
-1. Select the ![alt tag](./images/terminal) tab.  If it is not visible then select **Window &gt; Show view &gt; Terminal**.
+1. Select the ![alt tag](./images/terminal.png) tab.  If it is not visible then select **Window &gt; Show view &gt; Terminal**.
  tab.  
 1. Click on ![alt tag](./images/connect.png)  and select the appropriate COM port (depending on your computer), and configure it as you did it in Lab 1.
 ### Start the hardware session from Vivado.
@@ -256,7 +256,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     <p align = "center">
     <i>Setting a breakpoint</i>
     </p>
-1. Click on the **Resume** ![alt tag](./images/resume.png) button to execute the program and stop at the breakpoint.
+1. Click on the **Resume** (![alt tag](./images/resume.png)) button to execute the program and stop at the breakpoint.
 1. In the Vivado program, notice that the **hw\_ila\_2** status changed from _Waiting for Trigger_ to _Idle_, and the waveform window shows the triggered output (select the _hw\_ila\_data\_2.wcfg_ tab if necessary).
 1. Move the cursor to closer to the trigger point and then click on the ![alt tag](./images/zoom_in.png) button to zoom at the cursor. Click on the **Zoom In** button couple of times to see the activity near the trigger point. Similarly, you can see other activities by scrolling to right as needed.
     <p align="center">

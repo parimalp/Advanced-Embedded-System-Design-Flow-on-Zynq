@@ -113,7 +113,7 @@ After completing this lab, you will be able to:
 ## Test in Hardware   
 ### Connect and power up the board. Establish the serial communication using the SDK Terminal tab.  Program the FPGA.
 1. Connect and power up the board.
-1. In SDK, select **Xilinx &gt; Program FPGA** and **c** lick the **Program** button to program the FPGA.
+1. In SDK, select **Xilinx &gt; Program FPGA** and click the **Program** button to program the FPGA.
 1. Select the ![alt tag](./images/terminal.png) tab.  If it is not visible then select **Window &gt; Show view &gt; Terminal**.
 1. Click on ![alt tag](./images/connect.png) to initiate the serial connection and select the appropriate COM port (depending on your computer). Configure it with 115200 baud rate.
 ### Run the lab3 application.

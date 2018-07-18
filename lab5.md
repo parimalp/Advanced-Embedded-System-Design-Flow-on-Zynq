@@ -142,8 +142,9 @@ After completing this lab, you will be able to:
 1. Using the Windows Explorer, create directory called **SD\_image** under the **lab5** directory.
 1. In Windows Explorer, copy the **system\_wrapper.bit** of the lab1 project into the _SD\_image_ directory and rename it _lab1.bit_, and do similar for lab3
 
-    {labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit{labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
-
+    ```
+{labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit{labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
+    ```
     #### The XSDK _bootgen_ command will be used to convert the bit files into the required binary format. bootgen requires a .bif file which has been provided in the sources/lab5 directory. The .bif file specifies the target .bit files.
 
 1. Open a command prompt by selecting **Xilinx &gt; Launch Shell.**
@@ -153,13 +154,13 @@ After completing this lab, you will be able to:
 
 1. Generate the partial bitstream files in the BIN format using the provided &quot;.bif&quot; file located in the _sources_ directory. Use the following command:
 
-    bootgen -image ..\..\..\2018\_2\_zynq\_sources\lab5\bit\_files.bif -w -process\_bitstream bin
+    bootgen -image ..\ ..\ ..\2018\_2\_zynq\_sources\lab5\bit\_files.bif -w -process\_bitstream bin
 
 1. Rename the files _lab1.bit.bin_ and _lab3.bit.bin_ to _lab1.bin_ and _lab3.bin_
 1. The size of the file needs to match the size specified in the **lab5\_sd.c** file. The size can be determined by checking the file&#39;s properties. If the sizes do not match, then make the necessary change to the source code and save it (The values are defined as LAB1\_BITFILE\_LEN and LAB3\_BITFILE\_LEN).
 
     <p align="center">
-    <img src ="./images/lab5/Fig8.png" width="60%" height="80%"/>
+    <img src ="./images/lab5/Fig8-1.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
     <i>Checking the size of the generate bin file</i>
@@ -179,8 +180,10 @@ After completing this lab, you will be able to:
 ### Either copy the labxelf.bin files (two) from the sources directory or from the individual directories (if you did the optional part in the previous step and place them in the SD\_image directory. Copy all the bin files to the SD card. Configure the board to boot from SD card. Power ON the board. Test the design functionality
 1. In Windows explorer, copy the **lab1elf.bin** and **lab3elf.bin** files either from the **{sources}\lab5\ [pynqz1 or pynz2]\SDCard** directory or from the individual directories (if you did the optional parts in the previous step) and place them in the **SD\_image** directory.
 
-    {labs}\lab1\lab1.sdk\lab1\Debug\lab1elf.bin -&gt; SD\_image
-    {labs}\lab3\lab3.sdk\lab3\Debug\lab3elf.bin -&gt; SD\_image
+    ```
+{labs}\lab1\lab1.sdk\lab1\Debug\lab1elf.bin -&gt; SD\_image
+{labs}\lab3\lab3.sdk\lab3\Debug\lab3elf.bin -&gt; SD\_image
+    ```
 
 1. Insert a blank SD/MicroSD card (FAT32 formatted) in an SD Card reader, and using the Windows Explorer, copy the two bin files, the two elfbin files, and BOOT.bin from the **SD\_image** folder in to the SD card.
 1. Place the SD/MicroSD card in the board, and set the mode pins to boot the board from the SD card. Connect your PC to the UART port with the provided micro-USB cable.
@@ -315,7 +318,7 @@ This lab led you through creating the boot images which can boot standalone appl
 1. Exit the SDK of lab3.
 
 ## Appendix B-1
-###This step bring in MULTIBOOT register related code in Lab1. It then convert the lab1  executable file to the required (.bin) format. 
+### This step bring in MULTIBOOT register related code in Lab1. It then convert the lab1  executable file to the required (.bin) format. 
 
 ### Start a new SDK session and select lab1.sdk as the workspace. Define MULTIBOOT symbol, create Zynq\_fsbl application, and change the lab1 BSP reference to zynq\_fsbl\_bsp. Create the image using the zynq\_fsbl.elf, system\_wrapper.bit, and lab1.elf files.
 1. Start the **SDK** program and browse to the workspace pointing to **{labs}\lab1\lab1.sdk\** and click **OK.**
@@ -347,7 +350,7 @@ This lab led you through creating the boot images which can boot standalone appl
     The lab1.bin will be created in the lab1 directory.
 
 ## Appendix B-2
-###This step bring in MULTIBOOT register related code in Lab3. It then convert the lab3  executable file to the required (.bin) format. 
+### This step bring in MULTIBOOT register related code in Lab3. It then convert the lab3  executable file to the required (.bin) format. 
 ### Switch workspace to lab3.sdk directory. Define MULTIBOOT symbol, create Zynq\_fsbl application, and change the lab3 BSP reference to zynq\_fsbl\_bsp. Create the image using the zynq\_fsbl.elf, system\_wrapper.bit, and lab3.elf files and naming it as lab3.bin in the lab3 directory.
 1. In the **SDK** program switch the workspace by selecting **File &gt; Switch Workspace &gt; Other…** and browse to the workspace pointing to **{labs}\lab3\lab3.sdk\** and click **OK.**
 1. Right-click on the **lab3** entry, select the _C/C++ Build Settings_ option.

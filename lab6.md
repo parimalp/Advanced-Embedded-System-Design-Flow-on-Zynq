@@ -54,7 +54,6 @@ After completing this lab, you will be able to:
 
 ## Add FIR Core to the System
 ### Instantiate the provided FIR core twice naming the instances as fir\_left and fir\_right. Validate the design.
-    1.
 1. Click the ![alt tag](./images/add_ip.png) button and search for **fir** in the catalog.
 1. Double-click on the **fir\_top\_v1\_0** to add the IP instance to the system
 1. Select the _fir\_top\_1_ instance and change its name to **fir\_left** in its property form.
@@ -215,13 +214,6 @@ After completing this lab, you will be able to:
 1. Under the **ARM v7 gcc compiler** group, select the **Symbols** sub-group **,** select **SW\_PROFILE** , and delete it by clicking on the delete button.
 
     This will allow us to profile the hardware IP of the FIR application.
-
-    <p align="center">
-    <img src ="./images/lab6/Fig12.png" width="60%" height="80%"/>
-    </p>
-    <p align = "center">
-    <i>Deleting the user-defined symbol</i>
-    </p>
 
 1. Click **Apply** , and then click **OK**
 1. Select **Run &gt; Run Configurations** and click the **Run** button to profile the application again and click **OK** when profiling completes.

@@ -47,7 +47,7 @@ Connection automation could be run on all unconnected ports simultaneously. For 
     <p align = "center">
     <i>Connecting AXI Central DMA controller to S_AXI_HP0</i>
     </p>
-    Notice that an instance of AXI SmartConnect (axi\_smc\_1) is added, S\_AXI\_HP0 of the processing\_system7\_0 is connected to M00\_AXI of the axi\_smc\_1, S00\_AXI of the axi\_smc\_1 is connected to the m\_axi of the axi\_cdm\_0 instance.  Also, m\_axi\_aclk of the axi\_cdma\_0 is connected to the net originating from FCLK\_CLK0 of the processing\_system7\_0.
+    Notice that an instance of AXI SmartConnect (axi_smc_1) is added, S_AXI_HP0 of the processing_system7_0 is connected to M00_AXI of the axi_smc_1, S00_AXI of the axi_smc_1 is connected to the m\_axi of the axi_cdma_0 instance.  Also, m_axi_aclk of the axi_cdma_0 is connected to the net originating from FCLK_CLK0 of the processing_system7_0.
 
 1. Click on **Run Connection Automation** again, and select **/axi\_cdma\_0** (which includes **S\_AXI\_LITE** ).
 

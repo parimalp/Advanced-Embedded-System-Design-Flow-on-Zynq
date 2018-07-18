@@ -35,7 +35,7 @@ After completing this lab, you will be able to:
 1. Click **Open Block Design** in the _Flow Navigator_ pane to open the block diagram.
 1. Click the ![alt tag](./images/add_ip.png) button and search for **math** in the catalog.
 1. Double-click the **math\_ip\_v1\_0** to add an instance of the core to the design.
-1. Click on **Run Connection Automation** ensure math\_ip\_0 and S\_AXI are selected and click **OK.**
+1. Click on **Run Connection Automation**, ensure math\_ip\_0 and S\_AXI are selected, and click **OK.**
 
     The _Math IP_ consists of a hierarchical design with the lower-level module performing the addition. The higher-level module includes the two slave registers.
     <p align="center">

@@ -35,7 +35,7 @@ After completing this lab, you will be able to:
 1. Click **Open Block Design** in the _Flow Navigator_ pane to open the block diagram.
 1. Click the ![alt tag](./images/add_ip.png) button and search for **math** in the catalog.
 1. Double-click the **math\_ip\_v1\_0** to add an instance of the core to the design.
-1. Click on **Run Connection Automation** , (ensure math\_ip\_0 and S\_AXI are selected) and click **OK.**
+1. Click on **Run Connection Automation** ensure math\_ip\_0 and S\_AXI are selected and click **OK.**
 
     The _Math IP_ consists of a hierarchical design with the lower-level module performing the addition. The higher-level module includes the two slave registers.
     <p align="center">
@@ -67,7 +67,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Enable cross triggering between the PL and PS
 1. Double click on the _Zynq_ block to open the configuration properties.
 1. Click on PS-PL Configuration, and enable the _PS-PL Cross Trigger interface_.
-1. Expand _PS-PL Cross Trigger interface &gt; Input Cross Trigger_, and select **CPU0 DBG REQ** for_Cross Trigger Input 0._
+1. Expand _PS-PL Cross Trigger interface &gt; Input Cross Trigger_, and select **CPU0 DBG REQ** for _Cross Trigger Input 0._
 1. Similarly, expand Output Cross Trigger, and select **CPU0 DBG ACK** for _Cross Trigger Output 0_ and click **OK.**
     <p align="center">
     <img src ="./images/lab2/Fig5.png" width="60%" height="80%"/>
@@ -95,10 +95,10 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Click **OK**.
 1. Connect the VIO ports to the math instance ports as follows:
    ```
-    PROBE\_IN -&gt; result
-    PROBE\_OUT0 -&gt; sel
-    PROBE\_OUT1 -&gt; ain\_vio
-    PROBE\_OUT2 -&gt; bin\_vio
+    PROBE_IN -> result
+    PROBE_OUT0 -> sel
+    PROBE_OUT1 -> ain_vio
+    PROBE_OUT2 -> bin_vio
    ```
 1. Connect the **CLK** port of the _vio\_0_ to FCLK\_CKL0 net.
 1. The block diagram should look similar to shown below.
@@ -119,7 +119,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     <img src ="./images/lab2/Fig7.png" width="60%" height="80%"/>
     </p>
     <p align = "center">
-    <i>Block diagram of the design after marking AXI connection to the math\_ip\_0 instance for debugging</i>
+    <i>Block diagram of the design after marking AXI connection to the math_ip_0 instance for debugging</i>
     </p>
 1. Click the **Run Connection Automation** link to see the form where you can select the desired channels to monitor.
 1. Change _AXI Read Address_ and _AXI Read Data_ channels to **Data** since we will not trigger any signals of those channels.
@@ -137,7 +137,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 ### Add the provided lab2\_&lt;board&gt;.xdc from the sources\lab2 directory.  Generate bitstream.
 1. Right click in the _Sources_ panel, and select **Add Sources.**
 1. Select _Add or Create Constraints_ and click **Next**.
-1. Click the _Plus_button then **Add Files** , and browse to **{sources}\lab2\** and select **lab2\_pynz1.xdc,** or **lab2\_pynqz2.xdc** depending on the board you are using **.**
+1. Click the _Plus_ button then **Add Files**, browse to **{sources}\lab2\** and select **lab2\_pynz1.xdc,** or **lab2\_pynqz2.xdc** depending on the board you are using.
 1. Click **OK** and then click **Finish.**
 1. Click on the **Generate Bitstream** to run the implementation and bit generation processes.
 1. Click **Save** to save the project (if prompted), **OK** to ignore the warning (if prompted), and **Yes** to launch Implementation (if prompted). Click **OK** to launch the runs.
@@ -147,7 +147,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Export the hardware configuration by clicking **File &gt; Export &gt; Export Hardware…** , click the box to _Include Bitstream_
 1. Click **OK** to export and **Yes** to overwrite the previous project created by lab1.
 1. Launch SDK by clicking **File &gt; Launch SDK** and click **OK.**
-1. Right-click on the **lab1** and **standalone\_bsp\_0** and **system\_wrapper\_hw\_platfrom\_0** projects in the Project Explorer view and select **close**** project**.
+1. Right-click on the **lab1** and **standalone\_bsp\_0** and **system\_wrapper\_hw\_platfrom\_0** projects in the Project Explorer view and select **close project**.
 ### Create an empty application project named lab2, and import the provided lab2.c file.
 1. Select **File &gt; New** &gt; **Application Project.**
 1. In the _Project Name_ field, enter **lab2** as the project name, leave all other settings to their default&#39;s and click **Next** (a new BSP will be created) **.**
@@ -176,7 +176,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     <i>Enable cross triggering in the software environment</i>
     </p>
 1. When the _Cross Trigger Breakpoints_ dialog box opens, click **Create**
-1. Select the options as shown in _Figure 11_ and click **OK** to set up the cross-trigger condition for Processor to Fabric.
+1. Select the options as shown below and click **OK** to set up the cross-trigger condition for _Processor to Fabric_.
     <p align="center">
     <img src ="./images/lab2/Fig11.png" width="60%" height="80%"/>
     </p>
@@ -184,7 +184,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     <i>Enabling CPU0 for request from PL</i>
     </p>
 1. In the _Cross Trigger Breakpoints_ dialog box click **Create** again.
-1. Select the options as shown in _Figure 12_ and click **OK** to set up the cross trigger condition for Fabric to Processor.
+1. Select the options as shown below and click **OK** to set up the cross trigger condition for _Fabric to Processor_.
     <p align="center">
     <img src ="./images/lab2/Fig12.png" width="60%" height="80%"/>
     </p>
@@ -197,12 +197,11 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Connect and power up the board.
 1. Select **Xilinx** &gt; **Program FPGA** and click **Program**
 1. Select the **lab2** project in _Project Explorer_, right-click and select **Debug As &gt; Launch on Hardware** (System Debugger) to download the application, execute ps7\_init. (If prompted, click **Yes** to switch to the Debug perspective.)  The program execution starts and suspends at the entry point.
-1. Select the ![alt tag](./images/terminal.png) tab.  If it is not visible then select **Window &gt; Show view &gt; Terminal**.
- tab.  
+1. Select the ![alt tag](./images/terminal.png) tab.  If it is not visible then select **Window &gt; Show view &gt; Terminal** tab.  
 1. Click on ![alt tag](./images/connect.png)  and select the appropriate COM port (depending on your computer), and configure it as you did it in Lab 1.
 ### Start the hardware session from Vivado.
 1. Switch to Vivado.
-1. Click on **Open Hardware Manager** from the _Program__and Debug_ group of the _Flow Navigator_ pane to invoke the analyzer.
+1. Click on **Open Hardware Manager** from the _Program and Debug_ group of the _Flow Navigator_ pane to invoke the analyzer.
 1. Click on the **Open Target &gt; Auto connect** to establish the connection with the board.
 1. Select **Window &gt; Debug Probes**
 
@@ -233,7 +232,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 1. Similarly, add **WREADY,**** WSTRB, **and** WVALID** signals to the _ILA Basic Trigger setup_ window.
 1. Change the radix to binary for _WSTRB_, and change the value from **xxxx** to **xxx1**
 1. Change the value of **WVALID** and **WREADY** to 1.
-1. Set the trigger position of the _hw\_ila\_2_ to **512** inthe_Settings – hw\_ila\_2_
+1. Set the trigger position of the _hw\_ila\_2_ to **512** in the _Settings – hw\_ila\_2_
     <p align="center">
     <img src ="./images/lab2/Fig16.png" width="60%" height="80%"/>
     </p>
@@ -270,9 +269,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
     Observe the following:
 
     Around the 512<sup>th</sup> sample WDATA being written is 0x012 at offset 0 (AWADDR=0x0).
-
     At the 536<sup>th</sup> sample, offset is 0x4 (AWADDR), and the data being written is 0x034.
-
     At the 559<sup>th</sup> sample, data is being read from the IP at the offset 0x0 (ARADDR), and at 561# st mark the result (0x46) is on the RDATA bus.
 1. You also should see the following output in the SDK Terminal console.
     <p align="center">
@@ -328,8 +325,9 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 ### Cross trigger a debug session between the hardware and software
 1. In Vivado, select _hw\_ila\_1_
 1. In the ILA properties, set the _Trigger mode_ to **BASIC\_OR\_TRIGG\_IN** , and the _TRIG\_OUT_ mode to **TRIGGER\_OR\_TRIG\_IN**
-1. In SDK, in the C/C++ view, relaunch the software by right clicking on the lab2 project, and selecting _Debug As &gt; Launch on Hardware (System Debugger)_ (Click **OK** if prompted to reset the processor).
+1. In SDK, in the C/C++ view, relaunch the software by right clicking on the lab2 project, and selecting _Debug As &gt; Launch on Hardware (System Debugger)_.
 
+    Click **OK** if prompted to reset the processor.
     The program will be loaded and the excution will suspend at the entry point
 
 1. Arm the _hw\_ila\_1_ trigger.
@@ -348,7 +346,7 @@ We want to connect the ILA core to the LED interface.  Vivado prohibits connecti
 
     The program will continue execution. Flip switches until it is _0x03_.
 
-1. Click the Disconnect button ![alt tag](./images/disconnect.png) in the SDK to terminate the execution.
+1. Click the Disconnect button (![alt tag](./images/disconnect.png)) in the SDK to terminate the execution.
 1. Close the SDK by selecting **File &gt; Exit**.
 1. Close the hardware session by selecting **File &gt; Close Hardware Manager**. Click **OK**.
 1. Close Vivado program by selecting **File &gt; Exit**.

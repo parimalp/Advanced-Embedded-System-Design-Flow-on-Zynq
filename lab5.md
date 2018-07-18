@@ -142,12 +142,11 @@ After completing this lab, you will be able to:
 1. Using the Windows Explorer, create directory called **SD\_image** under the **lab5** directory.
 1. In Windows Explorer, copy the **system\_wrapper.bit** of the lab1 project into the _SD\_image_ directory and rename it _lab1.bit_, and do similar for lab3
 
-   ```
-{labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit
+    {labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit
 
-{labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
-   ```
-    #### The XSDK _bootgen_ command will be used to convert the bit files into the required binary format. bootgen requires a .bif file which has been provided in the sources/lab5 directory. The .bif file specifies the target .bit files.
+    {labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
+
+    The XSDK _bootgen_ command will be used to convert the bit files into the required binary format. bootgen requires a .bif file which has been provided in the sources/lab5 directory. The .bif file specifies the target .bit files.
 
 1. Open a command prompt by selecting **Xilinx &gt; Launch Shell.**
 1. In the command prompt window, change the directory to the bitstreams directory.
@@ -182,11 +181,10 @@ After completing this lab, you will be able to:
 ### Either copy the labxelf.bin files (two) from the sources directory or from the individual directories (if you did the optional part in the previous step and place them in the SD\_image directory. Copy all the bin files to the SD card. Configure the board to boot from SD card. Power ON the board. Test the design functionality
 1. In Windows explorer, copy the **lab1elf.bin** and **lab3elf.bin** files either from the **{sources}\lab5\ [pynqz1 or pynz2]\SDCard** directory or from the individual directories (if you did the optional parts in the previous step) and place them in the **SD\_image** directory.
 
-   ```
-{labs}\lab1\lab1.sdk\lab1\Debug\lab1elf.bin -&gt; SD\_image
+    {labs}\lab1\lab1.sdk\lab1\Debug\lab1elf.bin -&gt; SD\_image
 
-{labs}\lab3\lab3.sdk\lab3\Debug\lab3elf.bin -&gt; SD\_image
-   ```
+    {labs}\lab3\lab3.sdk\lab3\Debug\lab3elf.bin -&gt; SD\_image
+
 
 1. Insert a blank SD/MicroSD card (FAT32 formatted) in an SD Card reader, and using the Windows Explorer, copy the two bin files, the two elfbin files, and BOOT.bin from the **SD\_image** folder in to the SD card.
 1. Place the SD/MicroSD card in the board, and set the mode pins to boot the board from the SD card. Connect your PC to the UART port with the provided micro-USB cable.

@@ -143,7 +143,9 @@ After completing this lab, you will be able to:
 1. In Windows Explorer, copy the **system\_wrapper.bit** of the lab1 project into the _SD\_image_ directory and rename it _lab1.bit_, and do similar for lab3
 
    ```
-{labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit{labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
+{labs}/lab1/lab1.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab1.bit
+
+{labs}/lab3/lab3.runs/impl\_1/system\_wrapper.bit -&gt; SD\_image /lab3.bit
    ```
     #### The XSDK _bootgen_ command will be used to convert the bit files into the required binary format. bootgen requires a .bif file which has been provided in the sources/lab5 directory. The .bif file specifies the target .bit files.
 
@@ -182,6 +184,7 @@ After completing this lab, you will be able to:
 
    ```
 {labs}\lab1\lab1.sdk\lab1\Debug\lab1elf.bin -&gt; SD\_image
+
 {labs}\lab3\lab3.sdk\lab3\Debug\lab3elf.bin -&gt; SD\_image
    ```
 
